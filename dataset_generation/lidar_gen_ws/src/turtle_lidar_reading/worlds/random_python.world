@@ -1,0 +1,15 @@
+<?xml version="1" ?>
+<sdf version="1.4">
+  <world name="random_python_gen">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+	<uri>model://random_boxes</uri>
+    </include>
+  </world>
+</sdf>
+

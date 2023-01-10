@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch">
+    <arg name="world" value="/root/Desktop/project/dataset_generation/lidar_gen_ws/src/turtle_lidar_reading/worlds/random_python.world"/>
+    <arg name="x_pos" value="1.97"/>
+    <arg name="y_pos" value="5.15"/>
+    <arg name="yaw" value="-0.64"/>
+  </include>
+</launch>
