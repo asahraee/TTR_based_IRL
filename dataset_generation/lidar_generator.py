@@ -20,8 +20,8 @@ from scipy.spatial.transform import Rotation
 import pickle
 from map_generator import *
 from ttr_generator import *
-sys.path.append('/root/Desktop/project')
-sys.path.append('/root/Desktop/project/optimized_dp')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL/optimized_dp')
 
 
 #################################################################################
@@ -31,7 +31,7 @@ class TurtleLidarGen:
         to be done
         '''
         rospy.init_node('turtle_lidar_reader', anonymous=True)
-        self._package_dir = '/root/Desktop/project/dataset_generation/lidar_gen_ws/src/turtle_lidar_reading/'
+        self._package_dir = '../lidar_gen_ws/src/turtle_lidar_reading/'
         if not os.path.exists(self._package_dir): os.mkdir(self._package_dir)
         self._launch_file_path = self._package_dir + 'launch/turtle_lidar_reading.launch'
         #if not os.path.exists(self._launch_file_path): os.mkdir(self._launch_file_path)

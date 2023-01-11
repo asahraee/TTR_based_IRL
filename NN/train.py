@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader, random_split
 from torch.utils.tensorboard import SummaryWriter
 import time
 import sys
-sys.path.append('/root/Desktop/project/')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL/')
 
 from models import *
 from datasets import *

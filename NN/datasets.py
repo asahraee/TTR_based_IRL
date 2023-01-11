@@ -190,7 +190,7 @@ class TrueMapLidarRangeDubin3D(Dataset):
 
 
 def test():
-    data_path = '/root/Desktop/project/data_1'
+    data_path = '/root/Desktop/data_and_log/data_1'
     image_path = os.path.join(data_path, 'images/local/')
     text_file = os.path.join(data_path, 'csv/pos_ttr.csv')
     label_file = os.path.join(data_path, 'csv/image_labels.csv')

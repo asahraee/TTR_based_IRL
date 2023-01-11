@@ -199,7 +199,7 @@ def test():
     model3 = models.resnet18(pretrained=True)
     print('model3: ', model3)
 
-    datadir = '/root/Desktop/project/data_1'
+    datadir = '/root/Desktop/data_and_log/data_1'
     imdir = os.path.join(datadir, 'images/local/')
     txt = os.path.join(datadir, 'csv/pos_ttr.csv')
     lb = os.path.join(datadir, 'csv/image_labels.csv')

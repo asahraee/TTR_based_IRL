@@ -1,8 +1,8 @@
 import numpy as np
 import math
 import sys
-sys.path.append('/root/Desktop/project/')
-sys.path.append('/root/Desktop/project/optimized_dp')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL/optimized_dp')
 
 # Utility functions to initialize the problem
 from optimized_dp.Grid.GridProcessing import Grid
@@ -173,11 +173,6 @@ class TTRGen:
             while not path_is_valid:
                 print('trying a new path')
                 start = self._select_start_pos(obstcle_map)
-                ##for debugging
-                string = f'A new path \n start = {start} \n goal = {self._goal} \n ------ \n'
-                with open('/root/Desktop/project/dataset_generation/test4ttr/path_params.txt', 'w') as t:
-                            t.writelines(string)
-                ##
                 path, valid = ttr_dyn_sys.generate_path(start,
                         self._goal, t_span=150,
                         goal_proximity=self._goal_r)
@@ -380,7 +375,7 @@ def test():
 
         # saving map, ttr and path states for plotting in matlab
         ii = 5 # counter
-        dir = '/root/Desktop/project/dataset_generation/test4ttr'
+        dir = '/root/Desktop/data_and_log/test4ttr'
         def join(x): return os.path.join(dir, x)
         grid_name = join(f'grid_{ii}')
         map_name = join(f'map_{ii}')

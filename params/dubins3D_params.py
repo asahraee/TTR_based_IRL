@@ -38,10 +38,9 @@ map_no = 5000               # Number of random maps
 
 # Parameters used for training
 run_id = 0
-data_log_dir = '/root/Desktop/project/data_7'
-trainer_log_dir = '/dev/shm/train_log'
-saved_model = '/root/Desktop/project/NN/saved_model'
-#trainer_log_dir = '/root/Desktop/project/NN/train_log'
+data_log_dir = '/root/Desktop/data_and_log/data_7'
+trainer_log_dir = '/root/Desktop/data_and_log/train_log'
+saved_model = '/root/Desktop/data_and_log/saved_model'
 learning_rate = 0.0001
 batch_size = 512
 num_epochs = 10000

@@ -4,11 +4,16 @@ import math
 import matplotlib.pyplot as plt
 from PIL import Image
 
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL')
+
+import params.dubins3D_params as db3
+
+
 class MapCrop:
     def __init__(self, **kwargs):
         # kwargs = {rotate: true or false, size: size of final local map image in pixels, dir: the directory that local and global images will be saved, loc2glob: the ratio of the local map size to the global, map_min: the lowest bound of the map in [x,y] form, map_max: the upperbound in [x, y] form and not in pixels}
         self._log_dir = kwargs['dir'] if 'dir' in kwargs else\
-                os.path.join(os.getcwd(), '/images')
+                os.path.join(db3.data_log_dir, '/images')
         
         self._rotate = kwargs['rotate'] if 'rotate' in kwargs else True
         self._size = kwargs['size'] if 'size' in kwargs else [28, 28]

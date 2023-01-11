@@ -4,7 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import sys
 
-sys.path.append('/root/Desktop/project/')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL/')
 
 from utils.graham_scan import graham_scan
 from optimized_dp.Grid.GridProcessing import *

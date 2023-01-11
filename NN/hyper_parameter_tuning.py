@@ -1,7 +1,7 @@
 import os
 from train import *
 
-config_dir ='./grid_config_files'
+config_dir ='/root/Desktop/data_and_log/NN_grid_config_files'
 if not os.path.exists(config_dir):
     os.mkdir(config_dir)
 run_id = 1

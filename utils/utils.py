@@ -104,10 +104,7 @@ def get_intpolat_value(grid, value0, state):
         #print(flag)
         #if flag: time.sleep(2)
         string = f'flag = {flag} \n near_indx = {near_indx} \n near_value = {near_value} \n values = {values} \n state = {state} \n interpn_result = {result} \n ---- \n'
-        #with open('/root/Desktop/project/dataset_generation/test4ttr/passed_values.txt', 'a') as t:
-        #    t.writelines(string)
-    #if step % 1000 == 0:
-    #    savefig
+
     return interpn(pnts, values, state, bounds_error=False)
 
 def get_intpolat_value_test(grid, value, state):
@@ -115,6 +112,4 @@ def get_intpolat_value_test(grid, value, state):
     val = value[tuple(near_indx)]
     flag = True if val >= 10000 else False
     string = f'flag = {flag} \n near_indx = {near_indx} \n near_value = {val} \n state = {state} \n  ---- \n'
-    #with open('/root/Desktop/project/dataset_generation/test4ttr/passed_values.txt', 'a') as t:
-    #    t.writelines(string)
     return val

@@ -1,7 +1,7 @@
 import numpy
 import pandas as pd
 
-l_path = '/root/Desktop/project/data_2/csv/image_labels.csv'
+l_path = '/root/Desktop/data_and_log/data_2/csv/image_labels.csv'
 
 ls = pd.read_csv(l_path, sep=',', header=None, index_col =0)
 

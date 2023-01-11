@@ -4,7 +4,7 @@ import torch.nn as nn
 import torchvision.utils as tv
 import os
 import sys
-sys.path.append('/root/Desktop/project/')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL')
 
 from models import *
 from datasets import *
@@ -21,7 +21,7 @@ model.to(device)
 model.eval()
 
 # Defining dataset
-data_dir = "/root/Desktop/project/data_6"
+data_dir = "/root/Desktop/data_and_log/data_6"
 im_path = os.path.join(data_dir, 'images/local/')
 text_file = os.path.join(data_dir, 'csv/pos_ttr.csv')
 label_file = os.path.join(data_dir, 'csv/image_labels.csv')
@@ -43,9 +43,9 @@ with torch.no_grad():
     pred = model(im, st)
     l = loss(pred, ttr)
 
-low_loss_dir = "/root/Desktop/project/NN/train_log/low_loss/" 
+low_loss_dir = "/root/Desktop/data_and_log/sanity_check/low_loss/" 
 os.makedirs(low_loss_dir, exist_ok=True)
-high_loss_dir = "/root/Desktop/project/NN/train_log/high_loss/"
+high_loss_dir = "/root/Desktop/data_and_log/sanity_check/high_loss/"
 os.makedirs(high_loss_dir, exist_ok=True)
 low_i = 0
 high_i = 0

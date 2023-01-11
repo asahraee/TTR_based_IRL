@@ -7,8 +7,8 @@ from lidar_generator import *
 from map_crop import *
 import os
 
-sys.path.append('/root/Desktop/project')
-sys.path.append('/root/Desktop/project/optimized_dp')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL')
+sys.path.append('/root/Desktop/git_repo/TTR_based_IRL/optimized_dp')
 
 import params.dubins3D_params as db3
 
