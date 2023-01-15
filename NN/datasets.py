@@ -11,8 +11,8 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
-class TrueLocMapDubin3D(Dataset):
-    # This class loads ground truth local maps with relative x,y and initial theta as inputs
+class Dubin3D_A(Dataset):
+    # This class loads ground truth local maps with relative x,y and initial theta as inputs, and ttr as output
     def __init__(self, textfile, labels_file, image_dir,
             image_transform=None, target_transform_threshold=None):
 
@@ -26,7 +26,8 @@ class TrueLocMapDubin3D(Dataset):
         pos_ttr = pd.read_csv(textfile, sep=',',
                 header=0, index_col=0).to_numpy()
         self._n_samples = pos_ttr.shape[0]
-        states = pos_ttr[:,:-1].astype(np.float32)
+        states = np.stack((pos_ttr[:,6], pos_ttr[:,7], pos_ttr[:,2]),
+                axis=1).astype(np.float32)
         ttrs = pos_ttr[:,-1].astype(np.float32)
         
         self._labels = pd.read_csv(labels_file, sep=',',
@@ -35,10 +36,6 @@ class TrueLocMapDubin3D(Dataset):
         self._im_transform = image_transform
         #self._vec_transform = vector_transform
         if self._infin_tresh:
-            #self._target_transform = trans.Lambda(lambda x:\
-            #        torch.div(\
-            #        torch.sub(torch.pow(r, torch.floor(torch.div(x, dt))), 1) ,\
-            #        torch.sub(r,1)))
             self._target_transform = trans.Lambda(lambda x: a*\
                     (1 - torch.pow(r, torch.floor(x/dt) + 1))/(1-r))
             self._target_trans_infin = a/(1-r)
@@ -68,8 +65,8 @@ class TrueLocMapDubin3D(Dataset):
         '''to be done'''
         return self._n_samples
 
-class TrueGlobMapDubin3D(Dataset):
-    # This class loads ground truth local maps with relative x,y and initial theta as inputs
+class Dubin3D_B(Dataset):
+    # This class loads ground truth global maps with relative x,y and initial theta as inputs and ttr as output
     def __init__(self, textfile, labels_file, image_dir,
             image_transform=None, target_transform_threshold=None):
 
@@ -83,7 +80,8 @@ class TrueGlobMapDubin3D(Dataset):
         pos_ttr = pd.read_csv(textfile, sep=',',
                 header=0, index_col=0).to_numpy()
         self._n_samples = pos_ttr.shape[0]
-        states = pos_ttr[:,:-1].astype(np.float32)
+        states = np.stack((pos_ttr[:,6], pos_ttr[:,7], pos_ttr[:,2]),
+                axis=1).astype(np.float32)
         ttrs = pos_ttr[:,-1].astype(np.float32)
 
         self._labels = pd.read_csv(labels_file, sep=',',
@@ -128,8 +126,8 @@ class TrueGlobMapDubin3D(Dataset):
 
 
 
-class TrueMapLidarRangeDubin3D(Dataset):
-    # This class loads ground truth local maps with relative x,y and initial theta and lidar readings at start position as inputs
+class Dubin3D_C(Dataset):
+    # This class loads ground truth local maps with relative x,y and initial theta and lidar readings at start position as inputs, and ttr as output
     def __init__(self, textfile, labels_file, image_dir,
             image_transform=None, target_transform_threshold=None):
 
@@ -143,7 +141,8 @@ class TrueMapLidarRangeDubin3D(Dataset):
         pos_ttr = pd.read_csv(textfile, sep=',',
                 header=0, index_col=0).to_numpy()
         self._n_samples = pos_ttr.shape[0]
-        states = pos_ttr[:,:3].astype(np.float32)
+        states = np.stack((pos_ttr[:,6], pos_ttr[:,7], pos_ttr[:,2]),
+                axis=1).astype(np.float32)
         ttrs = pos_ttr[:,3].astype(np.float32)
         lidar_rngs = pos_ttr[4:-1].astype(np.float32)
 

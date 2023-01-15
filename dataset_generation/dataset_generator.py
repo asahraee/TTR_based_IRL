@@ -55,9 +55,12 @@ class DataGen:
         file_content = []
         labels = []
         lidar_rng = []
-        header = ['x_r', 'y_r', 'theta_s', 'ttr']
-        if self._read_lidar:
+        header = ['x_s', 'y_s', 'theta_s'
+                , 'x_g', 'y_g', 'theta_g'
+                , 'x_r', 'y_r', 'obstacle_flag', 'ttr']
+        if self._read_lidar: #TODO !!!!!!
             header.append('lidar_rng')
+
         csv_path = os.path.join(self._log_dir,'csv/')
         if not os.path.exists(csv_path):
             os.mkdir(csv_path)
@@ -94,16 +97,30 @@ class DataGen:
                 l = map_cropper.crop_local(map_i.get_inflated_map(),
                         i, pos_ttr_data[0])
                 labels.extend(l)
+            
             starts = np.array(pos_ttr_data[0])
             goals = np.array(pos_ttr_data[1])
             relative = goals - starts
+            
+            x_s = starts[:, 0]
+            y_s = starts[:, 1]
+            theta_s = starts[:, 2]
+            
+            x_g = goals[:, 0]
+            y_g = goals[:, 1]
+            theta_g = goals[:, 2]
+
             x_r = relative[:, 0]
             y_r = relative[:, 1]
-            theta_s = starts[:, 2]
+            
+            # obs_flag=true: path goes through obstacles, so no valid path is found
+            obs_flag = np.array([pos_ttr_data[2]>100])
+
             ttr = np.array(pos_ttr_data[2]).squeeze()
-            print('xShape: ', x_r.shape, ' yShape: ', y_r.shape, ' thetaShape:', theta_s.shape, ' ttr_shape: ', ttr.shape) 
-            stack = np.stack((x_r, y_r, theta_s, ttr), axis=1)
-            print('stackShape: ', stack.shape)
+
+            stack = np.stack((x_s, y_s, theta_s
+                            , x_g, y_g, theta_g
+                            , x_r, y_r, obs_flag, ttr), axis=1)
             if self._read_lidar:
                 file_content.extend(np.concatenate((stack, lidar_rng_i), axis=1))
             else:
