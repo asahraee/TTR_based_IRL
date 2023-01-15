@@ -6,7 +6,7 @@
   <arg name="roll" default="0.0"/>
   <arg name="pitch" default="0.0"/>
   <arg name="yaw" default="0.0"/>
-  <arg name="world" default="~/Desktop/project/dataset_generation/lidar_gen_ws/src/turtle_lidar_reading/worlds/random_python.world"/>
+  <arg name="world" default="~/Desktop/git_repo/TTR_based_IRL/dataset_generation/lidar_gen_ws/src/turtle_lidar_reading/worlds/random_python.world"/>
  <!--<arg name="world" default="$(find turtlebot3_gazebo)/worlds/empty.world"/>-->
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
