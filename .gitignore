@@ -1,3 +1,5 @@
 train_log/
 saved_model/
 test/
+devel/
+build/
