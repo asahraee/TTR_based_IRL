@@ -140,7 +140,7 @@ class TTRGen:
         
         # Choosing a goal for the map
         self._goal = np.array(obstcle_map.get_goal())
-        print('goal = ', self._goal)
+        #print('goal = ', self._goal)
         
         # Specifying the target set and plot options
         init_set = CylinderShape(self._grid, dim2ignore,

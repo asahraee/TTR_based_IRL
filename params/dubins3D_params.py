@@ -24,7 +24,7 @@ dyn_bounds = dict(w_range=w_range, v=v, dstb_max=dstb_max)
 # TTR Parameters
 computation_error = 0.001     # Convergence error
 goal_radi = 0.1            # Goal radius
-samples_no = 200         # Number of generated trainig data for each map-goal pair
+samples_no = 3         # Number of generated trainig data for each map-goal pair
 
 # Lidar Parameters
 
@@ -33,12 +33,12 @@ size_pix = np.array([200, 200])   # Size of the local maps in pixels
 loc2glob = 0.5          # The ratio between local map and global map size in meters
                         # assuming it's the same for x and y coordinates
 # General Parameters
-map_no = 5000               # Number of random maps
+map_no = 1               # Number of random maps
 
 
 # Parameters used for training
 run_id = 0
-data_log_dir = '/root/Desktop/data_and_log/data_7'
+data_log_dir = '/root/Desktop/data_and_log/data_8'
 trainer_log_dir = '/root/Desktop/data_and_log/train_log'
 saved_model = '/root/Desktop/data_and_log/saved_model'
 learning_rate = 0.0001

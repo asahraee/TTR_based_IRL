@@ -31,7 +31,7 @@ class TurtleLidarGen:
         to be done
         '''
         rospy.init_node('turtle_lidar_reader', anonymous=True)
-        self._package_dir = '../lidar_gen_ws/src/turtle_lidar_reading/'
+        self._package_dir = '/root/Desktop/git_repo/TTR_based_IRL/dataset_generation/lidar_gen_ws/src/turtle_lidar_reading/'
         if not os.path.exists(self._package_dir): os.mkdir(self._package_dir)
         self._launch_file_path = self._package_dir + 'launch/turtle_lidar_reading.launch'
         #if not os.path.exists(self._launch_file_path): os.mkdir(self._launch_file_path)
@@ -46,11 +46,12 @@ class TurtleLidarGen:
         
         self._laser_scan = rospy.Subscriber('/scan', LaserScan, self._scan_cb, queue_size=1)
         # The value that tells us what to replace infinity with in laser scan range post processing
-        self._laser_replace_inf = kwargs['inf'] if 'inf' in kwargs else 0
+        self._laser_replace_inf = kwargs['inf'] if 'inf' in kwargs else -1
         self._set_state = rospy.ServiceProxy('/gazebo/set_model_state', SetModelState)
         self._rate = rospy.Rate(0.5)
         self._lidar_rng_i = []
         self._lidar_data = []
+        
 
     def _get_arc(self, p1_y, p1_x, p0_y, p0_x):
         if p1_x - p0_x == 0:
@@ -155,7 +156,7 @@ class TurtleLidarGen:
     
     def _scan_cb(self, msg):
         self._lidar_rng_i_raw = msg.ranges
-        self._lidar_rng_i = self.process(self._replace_inf)
+        self._lidar_rng_i = self._process(self._laser_replace_inf)
         self._lidar_info = {'angle_min':msg.angle_min, 'angle_max':msg.angle_max,\
                 'angle_increment':msg.angle_increment,'rng_min':msg.range_min,\
                 'rng_max':msg.range_max}
@@ -279,7 +280,7 @@ class TurtleLidarGen:
                 # call set_model_state service
                 try:
                     print('trying to set state')
-                    print(os.environ["TURTLEBOT3_MODEL"])
+                    #print(os.environ["TURTLEBOT3_MODEL"])
                     rsp = self._set_state(state_msg)
                     print(f"state = {state} set")
                 except rospy.ServiceException as e:
@@ -291,7 +292,7 @@ class TurtleLidarGen:
             print('sleeping')
             
             # process scan message and replace infinity with value
-            self._process(val=0)
+            #self._process(self._replace_inf)
 
             # save this iterations reading
             self._lidar_data.append(self._lidar_rng_i)

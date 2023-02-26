@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 import os
 import math
@@ -64,7 +65,7 @@ class MapCrop:
         # calculate left top right and bottom for image crop
         right_pixs, low_pixs = (self._size - 1)//2
         left_pixs, up_pixs = self._size - [right_pixs, low_pixs] - 1
-        print('left_no: ', left_pixs, 'right_no: ', right_pixs, 'up_no: ', up_pixs, 'low_no: ', low_pixs)
+        #print('left_no: ', left_pixs, 'right_no: ', right_pixs, 'up_no: ', up_pixs, 'low_no: ', low_pixs)
         left = center_pix[1] - left_pixs
         upper = center_pix[0] - up_pixs
         right = center_pix[1] + right_pixs
@@ -76,19 +77,19 @@ class MapCrop:
         # map_no is used as part of the name for saving the global map as image
         centers = [states[i][pos_indx[0:2]] for i in range(len(states))]
         labels = []
-        print('states dimension: ', np.shape(states))
-        print('centers dimension: ', np.shape(centers))
+        #print('states dimension: ', np.shape(states))
+        #print('centers dimension: ', np.shape(centers))
         # angles show the amount of rotattion needed for the global map, not the heading anymore
         angles = [states[i][pos_indx[2]] - (math.pi/2) for i in range(
             len(states))]
-        print('angles dimension: ', np.shape(angles))
+        #print('angles dimension: ', np.shape(angles))
         total_no = len(centers)
         # global map image path
         g_image_path = self._save_glob_map(obstcl_map, map_no)
         print('Global map {map_no} generated')
         for i, (center, angle) in enumerate(zip(centers, angles)):
             # print center to check, it must be numpy array of size (2,)
-            print('center: ', center)
+            #print('center: ', center)
             # the pixel closest to the current state which is used as the center of local map
             center_pix = self._find_pixel(center)
             # find the corners of the local map based on size
@@ -104,7 +105,7 @@ class MapCrop:
             fin_im = temp_rotated.crop(corners)
             fin_im.save(temp_log_dir)
             labels.append(label)
-            print(f'local map {i}/{total_no} generated')
+            print(f'local map {i}/{total_no-1} generated')
         return labels
 
 def test():

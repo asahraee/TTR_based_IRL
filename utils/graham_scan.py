@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 
@@ -51,12 +53,15 @@ def graham_scan(x, y, n):
 
     p_start = get_left_bottom_point(x, y, n)
     ps_sorted = sort_points_tan(x, y, n, p_start)
-
+    #print(ps_sorted)
     ps_result = []
     ps_result.append(ps_sorted[0])
     ps_result.append(ps_sorted[1])
     ps_result.append(ps_sorted[2])
 
+    #ps_result.append(ps_sorted[3])
+    
+    
     top = 2
     for i in range(3, n):
         while (top >= 1 and cross_product(x[ps_sorted[i]], y[ps_sorted[i]], x[ps_result[top]], y[ps_result[top]] \
@@ -65,12 +70,13 @@ def graham_scan(x, y, n):
             top -= 1
         ps_result.append(ps_sorted[i])
         top += 1
-
+    
     return ps_result
 
 
 def test():
-    n = 4
+  n = 4
+  for _ in range(50):   
     points = np.random.rand(n, 2)
 
     for point in points:
@@ -79,7 +85,7 @@ def test():
     x = points[:, 0]
     y = points[:, 1]
     result = graham_scan(x, y, n)
- 
+    print('result= ', result) 
     length = len(result)
     for i in range(0, length-1):
         plt.plot([x[result[i]], x[result[i+1]]], [y[result[i]], y[result[i+1]]], c='r')
@@ -88,5 +94,5 @@ def test():
     plt.show()
 
 
-# if __name__ == "__main__":
-#     test()
+if __name__ == "__main__":
+     test()

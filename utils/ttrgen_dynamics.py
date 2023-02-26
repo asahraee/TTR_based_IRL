@@ -21,7 +21,7 @@ class dyn:
         #print('ttr_shape', ttr.shape)
         fig11 = plt.figure('passed ttr')
         plt.imshow(ttr[:,:,27], cmap=plt.cm.gray)
-        print('ttr max = ', np.amax(ttr))
+        #print('ttr max = ', np.amax(ttr))
         self._grid = grid
         self._grid_prec = min([i / j for i, j in\
                 zip((self._grid.max - self._grid.min),
@@ -66,7 +66,7 @@ class dyn:
             if math.isnan(L):
                 #print('reset: ', reset, 'state: ', state)
                 #print('neigb1: ', neigb1)
-                print('left is nan')
+                #print('left is nan')
                 time.sleep(5)
                 return np.zeros(state.size)
             R = self._get_value(neigb2)
@@ -153,8 +153,8 @@ class DubinsCar3D(dyn):
         nanflag = True if (math.isnan(val)) else False
         obstacle = True if val >= 30 else False
         string = f'state = {x} \n ttr = {val} \n ttr_deriv = {ttr_deriv} \n d = {d} \n w = {w} \n nanflag = {nanflag} \n obstacle = {obstacle} \n ------- \n'
-        with open('/root/Desktop/project/dataset_generation/test4ttr/path_params.txt', 'a') as t:
-            t.writelines(string)
+        #with open('/root/Desktop/project/dataset_generation/test4ttr/path_params.txt', 'a') as t:
+        #   t.writelines(string)
 
 
         #print('state = ', x)

@@ -34,13 +34,15 @@ class MapGen2D:
         walls = []
         
         # Sorting the corners in a clockwise order
+        #print('x_size= ', x.size)
+        #print('y_size= ', y.size)
         order = graham_scan(x, y, self._edge_no)
-        print('order= ', order)
+        #print('edge_no= ', self._edge_no)
+        #print('order= ', order)
         # Creating an array of the edges & indicating every grid point inside an obstacle
         for i in range(len(order)):
             nexti = 0 if i == len(order)-1 else i+1
             ax = tuple(range(2,self._grid.dims))
-            print('ax= ', ax)
             data = np.maximum(data,  (np.squeeze(self._grid.vs[1], axis = ax)-y[order[i]])*(np.squeeze(self._grid.vs[0], axis = ax)-x[order[nexti]]) \
                     -(np.squeeze(self._grid.vs[1], axis = ax)-y[order[nexti]])*(np.squeeze(self._grid.vs[0], axis = ax)-x[order[i]]) )
             walls.append([x[order[i]], y[order[i]], x[order[nexti]], y[order[nexti]]])
@@ -49,7 +51,7 @@ class MapGen2D:
         # It is not imporatnt for TTR calculation or obstacle indicator
         new = np.where(data<0, 1, 0)
         data = new
-        print('data shape = ', new.shape, '1s in data    ', np.count_nonzero(new))
+        #print('data shape = ', new.shape, '1s in data    ', np.count_nonzero(new))
         return [data, walls]
     
     def _extend_obstcle_geo(self, inflation):
@@ -124,11 +126,11 @@ class MapGen2D:
             corners[:, 1] = corners[:, 1] + (np.random.rand(1, 1)[0][0] - 0.5) * (self._max_obs_cntr - self._min_obs_cntr)[1]
             if i == 0:
                 [obstcle_indicator, edges] = self._add_polygon(corners[:, 0], corners[:, 1])
-                walls.append(edges)
+                walls.append(edges) #????
             else:
                 [tmp, edges] = self._add_polygon(corners[:, 0], corners[:, 1])
                 obstcle_indicator = np.maximum(tmp, obstcle_indicator)
-                walls.append(edges)
+                walls.append(edges) #???
         self._obstcle_indicator = obstcle_indicator
         self._walls = walls
         self._extend_obstcle_geo(inflation)._choose_goal()
