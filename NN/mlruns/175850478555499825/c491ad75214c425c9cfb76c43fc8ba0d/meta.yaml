@@ -1,0 +1,15 @@
+artifact_uri: file:///root/Desktop/git_repo/TTR_based_IRL/NN/mlruns/175850478555499825/c491ad75214c425c9cfb76c43fc8ba0d/artifacts
+end_time: 1677532833044
+entry_point_name: ''
+experiment_id: '175850478555499825'
+lifecycle_stage: active
+run_id: c491ad75214c425c9cfb76c43fc8ba0d
+run_name: omniscient-fowl-119
+run_uuid: c491ad75214c425c9cfb76c43fc8ba0d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1677532752515
+status: 3
+tags: []
+user_id: root

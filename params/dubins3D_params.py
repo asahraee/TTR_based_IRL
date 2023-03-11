@@ -38,13 +38,14 @@ map_no = 1               # Number of random maps
 
 # Parameters used for training
 run_id = 0
-data_log_dir = '/root/Desktop/data_and_log/data_8'
+data_log_dir = '/root/Desktop/data_and_log/data_7'
 trainer_log_dir = '/root/Desktop/data_and_log/train_log'
 saved_model = '/root/Desktop/data_and_log/saved_model'
 learning_rate = 0.0001
 batch_size = 512
-num_epochs = 10000
+num_epochs = 200
 validation_ratio = 0.01
 test_ratio = 0
 regularization = 'L2' # L1, L2, na
 regularization_lambda = 0.0005
+data_trans = True # whether to have data transform or not

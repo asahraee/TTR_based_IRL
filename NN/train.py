@@ -56,7 +56,8 @@ class TrainerDubins3D():
     
     def train_with_true_local_map(self, run_id=db3.run_id, data_dir=db3.data_log_dir,
             learning_rate=db3.learning_rate, reg=db3.regularization,
-            reg_lambda=db3.regularization_lambda, image_size=db3.size_pix):
+            reg_lambda=db3.regularization_lambda, data_trans = db3.data_trans,
+            image_size=db3.size_pix):
         
         tstr = time.strftime("%Y%m%d_%H%M%S")
         writer_log_dir = self._logdir + \
@@ -75,8 +76,9 @@ class TrainerDubins3D():
         label_file = os.path.join(data_dir, 'csv/image_labels.csv')
 
         # Defining initial dataset
-        init_data = TrueLocMapDubin3D(text_file, label_file, im_path,
-                target_transform_threshold=1000)
+        ttt = 1000 if data_trans else None
+        init_data = Dubin3D_A(text_file, label_file, im_path,
+                target_transform_threshold=ttt)
         #init_data = TrueGlobMapDubin3D(text_file, label_file, im_path,
                 #target_transform_threshold=1000) 
         # Splitting data into train, validation and test sets
