@@ -37,7 +37,7 @@ class TTRGen:
         self._dyn = kwargs['dyn'] if 'dyn' in kwargs else 'DubinsCar3D'
         # This is just the name of function, DubinsCar,humanoid6D,etc
         # Larger n means more paths genrated
-        self._n = 10 
+        self._n = 20 
         self._dyn_bounds = kwargs['dyn_bounds']\
                 if 'dyn_bounds' in kwargs\
                 else dict(w_range=np.array([-1,1]),

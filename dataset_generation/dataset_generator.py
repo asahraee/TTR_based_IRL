@@ -73,7 +73,6 @@ class DataGen:
             rel_dist_content = []
             close_point_content = []
         labels = []
-        lidar_rng = []
         header_pos = ['x_s', 'y_s', 'theta_s'
                 , 'x_g', 'y_g', 'theta_g'
                 , 'x_r', 'y_r', 'obstacle_flag', 'ttr']
@@ -91,7 +90,7 @@ class DataGen:
 
 
 
-        for i in range(db3.map_no):
+        for i in range(124, db3.map_no):
             # Generating position and ttr data
             map_is_valid = False
             # creating map and ttr
@@ -119,6 +118,16 @@ class DataGen:
             #[[list of start pts][list of goal pts][list of TTRs]]
             #print('data: ', pos_ttr_data)
             walls = map_i.get_obstcles()
+
+            # Generating lidar data
+            if self._read_lidar:
+                # call lidar module to get raw lidar data
+                # lidar needs to be generated, for every state.
+                lidar_generator.generate_lidar_data(walls, pos_ttr_data[0])
+                lidar_rng_i, lidar_info_i = lidar_generator.get_raw_data()
+                # lidar_rng_i is a list of lists of the form:
+                # [[ranges for start position 1][ranges for start positio 2][...]]
+
             # Saving obstacle walls
             #print('walls: ', walls)
             if self._save_obstcl_walls:
@@ -155,19 +164,6 @@ class DataGen:
                 pd.DataFrame(np.array(close_point_content)).to_csv(
                         os.path.join(csv_path, 'obstacle_close_points.csv'))
                         #, header=['x1', 'y1', 'x2', 'y2', '...'])
-
-
-            
-            # Generating lidar data
-            if self._read_lidar:
-                # call lidar module to get raw lidar data
-                # lidar needs to be generated, for every state.
-                lidar_generator.generate_lidar_data(walls, pos_ttr_data[0])
-                lidar_rng_i, lidar_info_i = lidar_generator.get_raw_data()
-                # lidar_rng_i is a list of lists of the form:
-                # [[ranges for start position 1][ranges for start positio 2][...]]
-                lidar_rng.extend(lidar_rng_i.copy()) # not used right now, but maybe later
-
 
             if self._save_lidar_map:
                 '''to be done ...'''
