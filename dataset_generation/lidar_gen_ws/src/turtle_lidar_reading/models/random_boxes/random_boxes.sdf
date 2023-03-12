@@ -7,16 +7,16 @@
       <collision name='edge_1_Collision'>
         <geometry>
           <box>
-            <size>1.11 0.1 2</size>
+            <size>0.60 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-6.82 -8.52 1 0 -0 0.46</pose>
+        <pose frame=''>-6.91 4.86 1 0 -0 0.00</pose>
       </collision>
       <visual name='edge_1_Visual'>
-        <pose frame=''>-6.82 -8.52 1 0 -0 0.46</pose>
+        <pose frame=''>-6.91 4.86 1 0 -0 0.00</pose>
         <geometry>
           <box>
-            <size>1.11 0.1 2</size>
+            <size>0.60 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -33,16 +33,16 @@
       <collision name='edge_2_Collision'>
         <geometry>
           <box>
-            <size>0.83 0.1 2</size>
+            <size>1.02 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-6.46 -7.88 1 0 -0 -1.23</pose>
+        <pose frame=''>-6.27 5.24 1 0 -0 0.84</pose>
       </collision>
       <visual name='edge_2_Visual'>
-        <pose frame=''>-6.46 -7.88 1 0 -0 -1.23</pose>
+        <pose frame=''>-6.27 5.24 1 0 -0 0.84</pose>
         <geometry>
           <box>
-            <size>0.83 0.1 2</size>
+            <size>1.02 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -59,16 +59,16 @@
       <collision name='edge_3_Collision'>
         <geometry>
           <box>
-            <size>1.47 0.1 2</size>
+            <size>1.49 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-6.95 -8.13 1 0 -0 1.06</pose>
+        <pose frame=''>-6.57 5.24 1 0 -0 0.54</pose>
       </collision>
       <visual name='edge_3_Visual'>
-        <pose frame=''>-6.95 -8.13 1 0 -0 1.06</pose>
+        <pose frame=''>-6.57 5.24 1 0 -0 0.54</pose>
         <geometry>
           <box>
-            <size>1.47 0.1 2</size>
+            <size>1.49 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -87,16 +87,16 @@
       <collision name='edge_4_Collision'>
         <geometry>
           <box>
-            <size>0.44 0.1 2</size>
+            <size>0.42 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>6.44 7.70 1 0 -0 0.73</pose>
+        <pose frame=''>-5.60 -6.72 1 0 -0 0.52</pose>
       </collision>
       <visual name='edge_4_Visual'>
-        <pose frame=''>6.44 7.70 1 0 -0 0.73</pose>
+        <pose frame=''>-5.60 -6.72 1 0 -0 0.52</pose>
         <geometry>
           <box>
-            <size>0.44 0.1 2</size>
+            <size>0.42 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -113,16 +113,16 @@
       <collision name='edge_5_Collision'>
         <geometry>
           <box>
-            <size>0.92 0.1 2</size>
+            <size>1.39 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>6.14 7.89 1 0 -0 -0.09</pose>
+        <pose frame=''>-5.47 -5.92 1 0 -0 -1.48</pose>
       </collision>
       <visual name='edge_5_Visual'>
-        <pose frame=''>6.14 7.89 1 0 -0 -0.09</pose>
+        <pose frame=''>-5.47 -5.92 1 0 -0 -1.48</pose>
         <geometry>
           <box>
-            <size>0.92 0.1 2</size>
+            <size>1.39 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -139,16 +139,16 @@
       <collision name='edge_6_Collision'>
         <geometry>
           <box>
-            <size>0.49 0.1 2</size>
+            <size>0.84 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>5.49 7.78 1 0 -0 0.67</pose>
+        <pose frame=''>-5.95 -5.28 1 0 -0 0.11</pose>
       </collision>
       <visual name='edge_6_Visual'>
-        <pose frame=''>5.49 7.78 1 0 -0 0.67</pose>
+        <pose frame=''>-5.95 -5.28 1 0 -0 0.11</pose>
         <geometry>
           <box>
-            <size>0.49 0.1 2</size>
+            <size>0.84 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -165,16 +165,16 @@
       <collision name='edge_7_Collision'>
         <geometry>
           <box>
-            <size>0.98 0.1 2</size>
+            <size>1.61 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>5.78 7.59 1 0 -0 -0.07</pose>
+        <pose frame=''>-6.07 -6.07 1 0 -0 -1.20</pose>
       </collision>
       <visual name='edge_7_Visual'>
-        <pose frame=''>5.78 7.59 1 0 -0 -0.07</pose>
+        <pose frame=''>-6.07 -6.07 1 0 -0 -1.20</pose>
         <geometry>
           <box>
-            <size>0.98 0.1 2</size>
+            <size>1.61 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -193,16 +193,16 @@
       <collision name='edge_8_Collision'>
         <geometry>
           <box>
-            <size>0.77 0.1 2</size>
+            <size>0.40 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>0.51 -8.02 1 0 -0 0.04</pose>
+        <pose frame=''>-6.93 2.73 1 0 -0 0.28</pose>
       </collision>
       <visual name='edge_8_Visual'>
-        <pose frame=''>0.51 -8.02 1 0 -0 0.04</pose>
+        <pose frame=''>-6.93 2.73 1 0 -0 0.28</pose>
         <geometry>
           <box>
-            <size>0.77 0.1 2</size>
+            <size>0.40 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -219,16 +219,16 @@
       <collision name='edge_9_Collision'>
         <geometry>
           <box>
-            <size>0.69 0.1 2</size>
+            <size>1.68 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>1.24 -7.98 1 0 -0 0.06</pose>
+        <pose frame=''>-7.41 3.29 1 0 -0 -0.64</pose>
       </collision>
       <visual name='edge_9_Visual'>
-        <pose frame=''>1.24 -7.98 1 0 -0 0.06</pose>
+        <pose frame=''>-7.41 3.29 1 0 -0 -0.64</pose>
         <geometry>
           <box>
-            <size>0.69 0.1 2</size>
+            <size>1.68 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -245,16 +245,16 @@
       <collision name='edge_10_Collision'>
         <geometry>
           <box>
-            <size>0.84 0.1 2</size>
+            <size>0.99 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>1.39 -7.59 1 0 -0 -1.10</pose>
+        <pose frame=''>-8.29 3.34 1 0 -0 1.13</pose>
       </collision>
       <visual name='edge_10_Visual'>
-        <pose frame=''>1.39 -7.59 1 0 -0 -1.10</pose>
+        <pose frame=''>-8.29 3.34 1 0 -0 1.13</pose>
         <geometry>
           <box>
-            <size>0.84 0.1 2</size>
+            <size>0.99 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -271,16 +271,16 @@
       <collision name='edge_11_Collision'>
         <geometry>
           <box>
-            <size>1.35 0.1 2</size>
+            <size>1.40 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>0.66 -7.63 1 0 -0 0.65</pose>
+        <pose frame=''>-7.81 2.78 1 0 -0 -0.16</pose>
       </collision>
       <visual name='edge_11_Visual'>
-        <pose frame=''>0.66 -7.63 1 0 -0 0.65</pose>
+        <pose frame=''>-7.81 2.78 1 0 -0 -0.16</pose>
         <geometry>
           <box>
-            <size>1.35 0.1 2</size>
+            <size>1.40 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -299,16 +299,16 @@
       <collision name='edge_12_Collision'>
         <geometry>
           <box>
-            <size>0.27 0.1 2</size>
+            <size>1.27 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.92 -7.50 1 0 -0 0.27</pose>
+        <pose frame=''>-2.70 4.09 1 0 -0 0.07</pose>
       </collision>
       <visual name='edge_12_Visual'>
-        <pose frame=''>-2.92 -7.50 1 0 -0 0.27</pose>
+        <pose frame=''>-2.70 4.09 1 0 -0 0.07</pose>
         <geometry>
           <box>
-            <size>0.27 0.1 2</size>
+            <size>1.27 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -325,16 +325,16 @@
       <collision name='edge_13_Collision'>
         <geometry>
           <box>
-            <size>1.34 0.1 2</size>
+            <size>0.40 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.41 -6.91 1 0 -0 0.96</pose>
+        <pose frame=''>-2.08 4.33 1 0 -0 -1.47</pose>
       </collision>
       <visual name='edge_13_Visual'>
-        <pose frame=''>-2.41 -6.91 1 0 -0 0.96</pose>
+        <pose frame=''>-2.08 4.33 1 0 -0 -1.47</pose>
         <geometry>
           <box>
-            <size>1.34 0.1 2</size>
+            <size>0.40 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -351,16 +351,16 @@
       <collision name='edge_14_Collision'>
         <geometry>
           <box>
-            <size>1.28 0.1 2</size>
+            <size>1.31 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.66 -6.33 1 0 -0 -0.04</pose>
+        <pose frame=''>-2.30 5.16 1 0 -0 -1.26</pose>
       </collision>
       <visual name='edge_14_Visual'>
-        <pose frame=''>-2.66 -6.33 1 0 -0 -0.04</pose>
+        <pose frame=''>-2.30 5.16 1 0 -0 -1.26</pose>
         <geometry>
           <box>
-            <size>1.28 0.1 2</size>
+            <size>1.31 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -377,16 +377,16 @@
       <collision name='edge_15_Collision'>
         <geometry>
           <box>
-            <size>1.25 0.1 2</size>
+            <size>1.93 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-3.18 -6.92 1 0 -0 -1.37</pose>
+        <pose frame=''>-2.92 4.92 1 0 -0 1.13</pose>
       </collision>
       <visual name='edge_15_Visual'>
-        <pose frame=''>-3.18 -6.92 1 0 -0 -1.37</pose>
+        <pose frame=''>-2.92 4.92 1 0 -0 1.13</pose>
         <geometry>
           <box>
-            <size>1.25 0.1 2</size>
+            <size>1.93 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -405,16 +405,16 @@
       <collision name='edge_16_Collision'>
         <geometry>
           <box>
-            <size>1.92 0.1 2</size>
+            <size>0.43 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-1.09 2.58 1 0 -0 0.49</pose>
+        <pose frame=''>-7.71 -2.66 1 0 -0 0.03</pose>
       </collision>
       <visual name='edge_16_Visual'>
-        <pose frame=''>-1.09 2.58 1 0 -0 0.49</pose>
+        <pose frame=''>-7.71 -2.66 1 0 -0 0.03</pose>
         <geometry>
           <box>
-            <size>1.92 0.1 2</size>
+            <size>0.43 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -431,16 +431,16 @@
       <collision name='edge_17_Collision'>
         <geometry>
           <box>
-            <size>1.36 0.1 2</size>
+            <size>0.38 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-0.68 3.56 1 0 -0 -0.88</pose>
+        <pose frame=''>-7.49 -2.46 1 0 -0 1.55</pose>
       </collision>
       <visual name='edge_17_Visual'>
-        <pose frame=''>-0.68 3.56 1 0 -0 -0.88</pose>
+        <pose frame=''>-7.49 -2.46 1 0 -0 1.55</pose>
         <geometry>
           <box>
-            <size>1.36 0.1 2</size>
+            <size>0.38 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -457,16 +457,42 @@
       <collision name='edge_18_Collision'>
         <geometry>
           <box>
-            <size>2.11 0.1 2</size>
+            <size>0.40 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-1.53 3.11 1 0 -0 1.17</pose>
+        <pose frame=''>-7.69 -2.30 1 0 -0 0.13</pose>
       </collision>
       <visual name='edge_18_Visual'>
-        <pose frame=''>-1.53 3.11 1 0 -0 1.17</pose>
+        <pose frame=''>-7.69 -2.30 1 0 -0 0.13</pose>
         <geometry>
           <box>
-            <size>2.11 0.1 2</size>
+            <size>0.40 0.1 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <collision name='edge_19_Collision'>
+        <geometry>
+          <box>
+            <size>0.34 0.1 2</size>
+          </box>
+        </geometry>
+        <pose frame=''>-7.90 -2.49 1 0 -0 1.47</pose>
+      </collision>
+      <visual name='edge_19_Visual'>
+        <pose frame=''>-7.90 -2.49 1 0 -0 1.47</pose>
+        <geometry>
+          <box>
+            <size>0.34 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -482,45 +508,19 @@
       </visual>
     </link>
     <link name='obstcle_6'>
-      <collision name='edge_19_Collision'>
-        <geometry>
-          <box>
-            <size>0.45 0.1 2</size>
-          </box>
-        </geometry>
-        <pose frame=''>5.00 7.66 1 0 -0 0.07</pose>
-      </collision>
-      <visual name='edge_19_Visual'>
-        <pose frame=''>5.00 7.66 1 0 -0 0.07</pose>
-        <geometry>
-          <box>
-            <size>0.45 0.1 2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
       <collision name='edge_20_Collision'>
         <geometry>
           <box>
-            <size>1.25 0.1 2</size>
+            <size>0.86 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>5.84 7.79 1 0 -0 0.18</pose>
+        <pose frame=''>-8.12 -1.92 1 0 -0 -0.51</pose>
       </collision>
       <visual name='edge_20_Visual'>
-        <pose frame=''>5.84 7.79 1 0 -0 0.18</pose>
+        <pose frame=''>-8.12 -1.92 1 0 -0 -0.51</pose>
         <geometry>
           <box>
-            <size>1.25 0.1 2</size>
+            <size>0.86 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -537,16 +537,16 @@
       <collision name='edge_21_Collision'>
         <geometry>
           <box>
-            <size>1.09 0.1 2</size>
+            <size>0.04 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>5.96 8.11 1 0 -0 -0.40</pose>
+        <pose frame=''>-8.51 -1.71 1 0 -0 0.22</pose>
       </collision>
       <visual name='edge_21_Visual'>
-        <pose frame=''>5.96 8.11 1 0 -0 -0.40</pose>
+        <pose frame=''>-8.51 -1.71 1 0 -0 0.22</pose>
         <geometry>
           <box>
-            <size>1.09 0.1 2</size>
+            <size>0.04 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -563,16 +563,42 @@
       <collision name='edge_22_Collision'>
         <geometry>
           <box>
-            <size>0.96 0.1 2</size>
+            <size>0.09 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>5.12 7.99 1 0 -0 0.79</pose>
+        <pose frame=''>-8.52 -1.76 1 0 -0 -1.38</pose>
       </collision>
       <visual name='edge_22_Visual'>
-        <pose frame=''>5.12 7.99 1 0 -0 0.79</pose>
+        <pose frame=''>-8.52 -1.76 1 0 -0 -1.38</pose>
         <geometry>
           <box>
-            <size>0.96 0.1 2</size>
+            <size>0.09 0.1 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <collision name='edge_23_Collision'>
+        <geometry>
+          <box>
+            <size>0.83 0.1 2</size>
+          </box>
+        </geometry>
+        <pose frame=''>-8.13 -1.97 1 0 -0 -0.40</pose>
+      </collision>
+      <visual name='edge_23_Visual'>
+        <pose frame=''>-8.13 -1.97 1 0 -0 -0.40</pose>
+        <geometry>
+          <box>
+            <size>0.83 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -588,45 +614,19 @@
       </visual>
     </link>
     <link name='obstcle_7'>
-      <collision name='edge_23_Collision'>
-        <geometry>
-          <box>
-            <size>1.51 0.1 2</size>
-          </box>
-        </geometry>
-        <pose frame=''>-1.53 7.36 1 0 -0 -1.16</pose>
-      </collision>
-      <visual name='edge_23_Visual'>
-        <pose frame=''>-1.53 7.36 1 0 -0 -1.16</pose>
-        <geometry>
-          <box>
-            <size>1.51 0.1 2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
       <collision name='edge_24_Collision'>
         <geometry>
           <box>
-            <size>0.77 0.1 2</size>
+            <size>1.52 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.22 8.05 1 0 -0 -0.01</pose>
+        <pose frame=''>-1.64 3.23 1 0 -0 -1.26</pose>
       </collision>
       <visual name='edge_24_Visual'>
-        <pose frame=''>-2.22 8.05 1 0 -0 -0.01</pose>
+        <pose frame=''>-1.64 3.23 1 0 -0 -1.26</pose>
         <geometry>
           <box>
-            <size>0.77 0.1 2</size>
+            <size>1.52 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -643,16 +643,16 @@
       <collision name='edge_25_Collision'>
         <geometry>
           <box>
-            <size>1.35 0.1 2</size>
+            <size>1.00 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.46 7.40 1 0 -0 -1.35</pose>
+        <pose frame=''>-2.36 3.83 1 0 -0 0.25</pose>
       </collision>
       <visual name='edge_25_Visual'>
-        <pose frame=''>-2.46 7.40 1 0 -0 -1.35</pose>
+        <pose frame=''>-2.36 3.83 1 0 -0 0.25</pose>
         <geometry>
           <box>
-            <size>1.35 0.1 2</size>
+            <size>1.00 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -669,16 +669,42 @@
       <collision name='edge_26_Collision'>
         <geometry>
           <box>
-            <size>1.08 0.1 2</size>
+            <size>0.68 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-1.77 6.71 1 0 -0 -0.07</pose>
+        <pose frame=''>-2.75 3.38 1 0 -0 -1.28</pose>
       </collision>
       <visual name='edge_26_Visual'>
-        <pose frame=''>-1.77 6.71 1 0 -0 -0.07</pose>
+        <pose frame=''>-2.75 3.38 1 0 -0 -1.28</pose>
         <geometry>
           <box>
-            <size>1.08 0.1 2</size>
+            <size>0.68 0.1 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <collision name='edge_27_Collision'>
+        <geometry>
+          <box>
+            <size>1.36 0.1 2</size>
+          </box>
+        </geometry>
+        <pose frame=''>-2.03 2.78 1 0 -0 -0.42</pose>
+      </collision>
+      <visual name='edge_27_Visual'>
+        <pose frame=''>-2.03 2.78 1 0 -0 -0.42</pose>
+        <geometry>
+          <box>
+            <size>1.36 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -694,42 +720,16 @@
       </visual>
     </link>
     <link name='obstcle_8'>
-      <collision name='edge_27_Collision'>
-        <geometry>
-          <box>
-            <size>1.52 0.1 2</size>
-          </box>
-        </geometry>
-        <pose frame=''>-1.94 2.10 1 0 -0 -1.25</pose>
-      </collision>
-      <visual name='edge_27_Visual'>
-        <pose frame=''>-1.94 2.10 1 0 -0 -1.25</pose>
-        <geometry>
-          <box>
-            <size>1.52 0.1 2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
       <collision name='edge_28_Collision'>
         <geometry>
           <box>
             <size>1.07 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.67 3.04 1 0 -0 -0.42</pose>
+        <pose frame=''>-4.70 7.05 1 0 -0 0.76</pose>
       </collision>
       <visual name='edge_28_Visual'>
-        <pose frame=''>-2.67 3.04 1 0 -0 -0.42</pose>
+        <pose frame=''>-4.70 7.05 1 0 -0 0.76</pose>
         <geometry>
           <box>
             <size>1.07 0.1 2</size>
@@ -749,16 +749,16 @@
       <collision name='edge_29_Collision'>
         <geometry>
           <box>
-            <size>2.38 0.1 2</size>
+            <size>0.85 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-2.43 2.32 1 0 -0 -0.91</pose>
+        <pose frame=''>-4.05 7.75 1 0 -0 0.89</pose>
       </collision>
       <visual name='edge_29_Visual'>
-        <pose frame=''>-2.43 2.32 1 0 -0 -0.91</pose>
+        <pose frame=''>-4.05 7.75 1 0 -0 0.89</pose>
         <geometry>
           <box>
-            <size>2.38 0.1 2</size>
+            <size>0.85 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -772,21 +772,19 @@
           <layer>0</layer>
         </meta>
       </visual>
-    </link>
-    <link name='obstcle_9'>
       <collision name='edge_30_Collision'>
         <geometry>
           <box>
-            <size>0.43 0.1 2</size>
+            <size>1.23 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-4.36 -3.87 1 0 -0 1.41</pose>
+        <pose frame=''>-4.29 7.73 1 0 -0 0.61</pose>
       </collision>
       <visual name='edge_30_Visual'>
-        <pose frame=''>-4.36 -3.87 1 0 -0 1.41</pose>
+        <pose frame=''>-4.29 7.73 1 0 -0 0.61</pose>
         <geometry>
           <box>
-            <size>0.43 0.1 2</size>
+            <size>1.23 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -803,16 +801,16 @@
       <collision name='edge_31_Collision'>
         <geometry>
           <box>
-            <size>1.11 0.1 2</size>
+            <size>0.76 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-4.54 -3.15 1 0 -0 -1.18</pose>
+        <pose frame=''>-4.94 7.03 1 0 -0 1.17</pose>
       </collision>
       <visual name='edge_31_Visual'>
-        <pose frame=''>-4.54 -3.15 1 0 -0 -1.18</pose>
+        <pose frame=''>-4.94 7.03 1 0 -0 1.17</pose>
         <geometry>
           <box>
-            <size>1.11 0.1 2</size>
+            <size>0.76 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -826,19 +824,21 @@
           <layer>0</layer>
         </meta>
       </visual>
+    </link>
+    <link name='obstcle_9'>
       <collision name='edge_32_Collision'>
         <geometry>
           <box>
-            <size>1.71 0.1 2</size>
+            <size>0.65 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-5.31 -3.29 1 0 -0 0.86</pose>
+        <pose frame=''>1.37 -6.62 1 0 -0 0.11</pose>
       </collision>
       <visual name='edge_32_Visual'>
-        <pose frame=''>-5.31 -3.29 1 0 -0 0.86</pose>
+        <pose frame=''>1.37 -6.62 1 0 -0 0.11</pose>
         <geometry>
           <box>
-            <size>1.71 0.1 2</size>
+            <size>0.65 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -855,16 +855,16 @@
       <collision name='edge_33_Collision'>
         <geometry>
           <box>
-            <size>1.48 0.1 2</size>
+            <size>1.27 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>-5.13 -4.01 1 0 -0 -0.10</pose>
+        <pose frame=''>1.10 -6.36 1 0 -0 -0.37</pose>
       </collision>
       <visual name='edge_33_Visual'>
-        <pose frame=''>-5.13 -4.01 1 0 -0 -0.10</pose>
+        <pose frame=''>1.10 -6.36 1 0 -0 -0.37</pose>
         <geometry>
           <box>
-            <size>1.48 0.1 2</size>
+            <size>1.27 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -878,21 +878,19 @@
           <layer>0</layer>
         </meta>
       </visual>
-    </link>
-    <link name='obstcle_10'>
       <collision name='edge_34_Collision'>
         <geometry>
           <box>
-            <size>0.20 0.1 2</size>
+            <size>0.50 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>1.75 -2.96 1 0 -0 0.67</pose>
+        <pose frame=''>0.63 -6.34 1 0 -0 -1.04</pose>
       </collision>
       <visual name='edge_34_Visual'>
-        <pose frame=''>1.75 -2.96 1 0 -0 0.67</pose>
+        <pose frame=''>0.63 -6.34 1 0 -0 -1.04</pose>
         <geometry>
           <box>
-            <size>0.20 0.1 2</size>
+            <size>0.50 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -909,16 +907,16 @@
       <collision name='edge_35_Collision'>
         <geometry>
           <box>
-            <size>1.55 0.1 2</size>
+            <size>0.30 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>1.60 -2.15 1 0 -0 -1.27</pose>
+        <pose frame=''>0.90 -6.61 1 0 -0 -0.33</pose>
       </collision>
       <visual name='edge_35_Visual'>
-        <pose frame=''>1.60 -2.15 1 0 -0 -1.27</pose>
+        <pose frame=''>0.90 -6.61 1 0 -0 -0.33</pose>
         <geometry>
           <box>
-            <size>1.55 0.1 2</size>
+            <size>0.30 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -932,19 +930,21 @@
           <layer>0</layer>
         </meta>
       </visual>
+    </link>
+    <link name='obstcle_10'>
       <collision name='edge_36_Collision'>
         <geometry>
           <box>
-            <size>1.27 0.1 2</size>
+            <size>0.35 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>1.42 -2.05 1 0 -0 -1.51</pose>
+        <pose frame=''>-8.08 2.23 1 0 -0 0.42</pose>
       </collision>
       <visual name='edge_36_Visual'>
-        <pose frame=''>1.42 -2.05 1 0 -0 -1.51</pose>
+        <pose frame=''>-8.08 2.23 1 0 -0 0.42</pose>
         <geometry>
           <box>
-            <size>1.27 0.1 2</size>
+            <size>0.35 0.1 2</size>
           </box>
         </geometry>
         <material>
@@ -961,16 +961,68 @@
       <collision name='edge_37_Collision'>
         <geometry>
           <box>
-            <size>0.40 0.1 2</size>
+            <size>0.75 0.1 2</size>
           </box>
         </geometry>
-        <pose frame=''>1.56 -2.85 1 0 -0 -1.01</pose>
+        <pose frame=''>-7.68 2.59 1 0 -0 0.88</pose>
       </collision>
       <visual name='edge_37_Visual'>
-        <pose frame=''>1.56 -2.85 1 0 -0 -1.01</pose>
+        <pose frame=''>-7.68 2.59 1 0 -0 0.88</pose>
         <geometry>
           <box>
-            <size>0.40 0.1 2</size>
+            <size>0.75 0.1 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <collision name='edge_38_Collision'>
+        <geometry>
+          <box>
+            <size>0.32 0.1 2</size>
+          </box>
+        </geometry>
+        <pose frame=''>-7.58 2.96 1 0 -0 -0.55</pose>
+      </collision>
+      <visual name='edge_38_Visual'>
+        <pose frame=''>-7.58 2.96 1 0 -0 -0.55</pose>
+        <geometry>
+          <box>
+            <size>0.32 0.1 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <collision name='edge_39_Collision'>
+        <geometry>
+          <box>
+            <size>1.03 0.1 2</size>
+          </box>
+        </geometry>
+        <pose frame=''>-7.97 2.60 1 0 -0 1.04</pose>
+      </collision>
+      <visual name='edge_39_Visual'>
+        <pose frame=''>-7.97 2.60 1 0 -0 1.04</pose>
+        <geometry>
+          <box>
+            <size>1.03 0.1 2</size>
           </box>
         </geometry>
         <material>

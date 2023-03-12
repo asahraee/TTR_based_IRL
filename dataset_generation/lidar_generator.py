@@ -261,6 +261,9 @@ class TurtleLidarGen:
         rospy.wait_for_service('/gazebo/set_model_state')
         state_msg = ModelState()
         state_msg.model_name= 'turtlebot3_' + self._turtle_model
+        
+        self._lidar_data = []
+
         for state in states:  # need to change returned dataset in ttr code to match with this one better??????????
             if iter_1:
                 iter_1 = False
