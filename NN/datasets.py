@@ -26,8 +26,12 @@ class Dubin3D_A(Dataset):
         pos_ttr = pd.read_csv(textfile, sep=',',
                 header=0, index_col=0).to_numpy()
         self._n_samples = pos_ttr.shape[0]
-        states = np.stack((pos_ttr[:,6], pos_ttr[:,7], pos_ttr[:,2]),
+        # for data number less than 8
+        states = np.stack((pos_ttr[:,0], pos_ttr[:,1], pos_ttr[:,2]),
                 axis=1).astype(np.float32)
+        # for data_8 and after
+        #states = np.stack((pos_ttr[:,6], pos_ttr[:,7], pos_ttr[:,2]),
+        #        axis=1).astype(np.float32)
         ttrs = pos_ttr[:,-1].astype(np.float32)
         
         self._labels = pd.read_csv(labels_file, sep=',',
