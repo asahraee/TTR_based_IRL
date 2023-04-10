@@ -324,11 +324,27 @@ class TrainerDubins3D():
     def train_with_lidar_map():
         '''to be done'''
 
-def main():
-    print(db3.data_log_dir)
-    T = TrainerDubins3D()
-    T.train_with_true_local_map()
+def parse_args():
+    parser = argparse.ArgumentParser(sys.argv[1:])
+    parser.add_argument('--use_default_params', type=bool, default=True)
+    parser.add_argument('--learning_rate', type=float , default=0.001)
+    parser.add_argument('--transform', type=bool, default=False)
+    parser.add_argument('--reg_type', type=str, default="na")
+    parser.add_argument('--reg_lambda', type=float, default=0.001)
+    parser.add_argument('--config_id', type=int, default=1)
+    args = parser.parse_args()
+    return args
 
+def main():
+    args = parse_args()
+    T = TrainerDubins3D()
+
+    if args.use_default_params:
+        T.train_with_true_local_map()
+    else:
+        T.train_with_true_local_map(run_id=args.config_id,
+                learning_rate=args.learning_rate, reg=args.reg_type,
+                reg_lambda=args.reg_lambda, data_trans=args.transform)
 
 
 if __name__=='__main__': main()
