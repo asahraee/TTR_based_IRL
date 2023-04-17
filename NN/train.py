@@ -7,11 +7,14 @@ from torch.utils.tensorboard import SummaryWriter
 import time
 import sys
 sys.path.append('/root/Desktop/git_repo/TTR_based_IRL/')
+import certifi
 
 from models import *
 from datasets import *
 import params.dubins3D_params as db3
 
+os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 class TrainerDubins3D():
     def __init__(self, **kwargs):

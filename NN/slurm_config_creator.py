@@ -25,8 +25,8 @@ for trans in transform:
                 with open(config_path, 'w') as c:
                     c.write(f"#!/bin/bash\n")
                     c.write(f"#SBATCH --job-name=config_{run_id}\n")
-                    c.write("#SBATCH --output=/project/mars-lab/ttr4rl/logs/%x.log\n")
-                    c.write("#SBATCH --time=3:00:00\n#SBATCH --gres=gpu:1\n")
+                    c.write("#SBATCH --output=/project/mars-lab/ttr4rl/logs/server/%x.log\n")
+                    c.write("#SBATCH --time=5:00:00\n#SBATCH --gres=gpu:1\n")
                     c.write("#SBATCH --partition=short\n")
                     c.write("#SBATCH --cpus-per-task=2\n#SBATCH --mem=16G\n")
                     c.write("#SBATCH --mail-user=asahraee@sfu.ca\n")
@@ -34,7 +34,7 @@ for trans in transform:
                     
                     c.write("source ~/miniconda3/etc/profile.d/conda.sh\n")
                     c.write("conda activate opt_dp\ncd ~/ttr4rl/NN\n")
-                    c.write(f"python train.py --use_default_params False --learning_rate {l} --transform {trans} --reg_type {reg} --reg_lambda 0 --config_id {run_id}")
+                    c.write(f"srun python train.py --use_default_params False --learning_rate {l} --transform {trans} --reg_type {reg} --reg_lambda 0 --config_id {run_id}")
                 run_id += 1
             else:
                 for reg_l in reg_lambdas:
@@ -43,8 +43,8 @@ for trans in transform:
                     with open(config_path, 'w') as c:
                         c.write(f"#!/bin/bash\n")
                         c.write(f"#SBATCH --job-name=config_{run_id}\n")
-                        c.write("#SBATCH --output=/project/mars-lab/ttr4rl/logs/%x.log\n")
-                        c.write("#SBATCH --time=3:00:00\n#SBATCH --gres=gpu:1\n")
+                        c.write("#SBATCH --output=/project/mars-lab/ttr4rl/logs/server/%x.log\n")
+                        c.write("#SBATCH --time=5:00:00\n#SBATCH --gres=gpu:1\n")
                         c.write("#SBATCH --partition=short\n")
                         c.write("#SBATCH --cpus-per-task=2\n#SBATCH --mem=16G\n")
                         c.write("#SBATCH --mail-user=asahraee@sfu.ca\n")
@@ -54,5 +54,5 @@ for trans in transform:
                         c.write("source ~/miniconda3/etc/profile.d/conda.sh\n")
                         c.write("conda activate opt_dp\n")
                         c.write("cd ~/ttr4rl/NN\n")
-                        c.write(f"python train.py --use_default_params False --learning_rate {l} --transform {trans} --reg_type {reg} --reg_lambda {reg_l} --config_id {run_id}")
+                        c.write(f"srun python train.py --use_default_params False --learning_rate {l} --transform {trans} --reg_type {reg} --reg_lambda {reg_l} --config_id {run_id}")
                     run_id += 1
