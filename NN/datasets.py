@@ -79,11 +79,11 @@ class Dubin3D_A(Dataset):
                 self._labels.iloc[index, 0])
         image = read_image(image_path).float()
         if self._im_trans:
-            image = self._im_trans(image)
+            image = self._im_trans(image).float()
         # read state and apply transform
         state = self.states[index]
         if self._state_trans:
-            state = self._state_trans(state)
+            state = self._state_trans(state).float()
         # read ttr and apply transform
         ttr = self.ttrs[index]
         if self._infin_tresh:
